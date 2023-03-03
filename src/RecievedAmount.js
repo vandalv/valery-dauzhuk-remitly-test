@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 
-function RecievedAmount({dataB, updateDataA, updateDataB, currencyExchangeData}){
+function RecievedAmount({recivedAmountData, updateSendAmountData, updateRecivedAmountData, currencyExchangeData}){
 
     const [value, setValue] = useState(0);
     const [isInputSelected, setIsInputSelected] = useState(false);
 
     const handleInputFocus = () => {
         setValue(calculateSendAmount().toFixed(2));
-        updateDataA(calculateSendAmount());
+        updateSendAmountData(calculateSendAmount());
         setIsInputSelected(true);
     };
     
     const handleInputBlur = () => {
-        updateDataB(value / currencyExchangeData);
+        updateRecivedAmountData(value / currencyExchangeData);
         setIsInputSelected(false);
     };
 
@@ -20,12 +20,12 @@ function RecievedAmount({dataB, updateDataA, updateDataB, currencyExchangeData})
         const inputValue = event.target.value;
         if (/^(?!0\d)(\d*\.?\d{0,2})$/.test(inputValue)) {
         setValue(inputValue);
-        updateDataA(inputValue);
+        updateSendAmountData(inputValue);
         }
     };
 
     function calculateSendAmount() {
-        let exchangeResult = dataB * currencyExchangeData;
+        let exchangeResult = recivedAmountData * currencyExchangeData;
         return Math.floor(exchangeResult * 100) / 100;;
     }
 

@@ -5,8 +5,8 @@ import SendAmount from './SendAmount';
 
 function CurrencyConverter(){
 
-    const [dataA, setDataA] = useState(0);
-    const [dataB, setDataB] = useState(0);
+    const [sendAmountData, setSendAmountData] = useState(0);
+    const [recivedAmountData, setRecivedAmountData] = useState(0);
     const [currencyExchangeData, setCurrencyExchangeData] = useState(0);
 
     useEffect(() => {
@@ -16,19 +16,19 @@ function CurrencyConverter(){
         .catch(error => console.log(error));
     }, []);
 
-    const updateDataA = (newData) => {
-        setDataA(newData);
+    const updateSendAmountData = (newData) => {
+        setSendAmountData(newData);
     };
     
-    const updateDataB = (newData) => {
-        setDataB(newData);
+    const updateRecivedAmountData = (newData) => {
+        setRecivedAmountData(newData);
     }
 
     return (
         <div>
-            <SendAmount dataA={dataA} updateDataB={updateDataB} updateDataA={updateDataA} currencyExchangeData={currencyExchangeData}/>
+            <SendAmount sendAmountData={sendAmountData} updateRecivedAmountData={updateRecivedAmountData} updateSendAmountData={updateSendAmountData} currencyExchangeData={currencyExchangeData}/>
             <br/>
-            <RecievedAmount dataB={dataB} updateDataA={updateDataA} updateDataB={updateDataB} currencyExchangeData={currencyExchangeData}/>
+            <RecievedAmount recivedAmountData={recivedAmountData} updateSendAmountData={updateSendAmountData} updateRecivedAmountData={updateRecivedAmountData} currencyExchangeData={currencyExchangeData}/>
             <h3>1 GBP = {currencyExchangeData} PLN</h3>
         </div>
     )
