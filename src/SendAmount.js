@@ -32,4 +32,4 @@ function SendAmount({sendAmountData, updateRecivedAmountData, updateSendAmountDa
     return <input type="text" value={isInputSelected ? value : calculateRecievedAmount().toFixed(2)} onChange={handleChange} onFocus={handleInputFocus} onBlur={handleInputBlur}/>
 }
 
-export default SendAmount;
+ export default SendAmount;
