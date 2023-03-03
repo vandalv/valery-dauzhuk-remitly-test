@@ -25,8 +25,8 @@ function SendAmount({sendAmountData, updateRecivedAmountData, updateSendAmountDa
     };
 
     function calculateRecievedAmount() {
-        let exchangeResult = sendAmountData / currencyExchangeData;
-        return exchangeResult;
+            let exchangeResult = sendAmountData / currencyExchangeData;
+            return exchangeResult;
     }
 
     return <input type="text" value={isInputSelected ? value : calculateRecievedAmount().toFixed(2)} onChange={handleChange} onFocus={handleInputFocus} onBlur={handleInputBlur}/>
