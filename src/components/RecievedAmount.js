@@ -32,10 +32,10 @@ function RecievedAmount({recivedAmountData, updateSendAmountData, updateRecivedA
     }
 
     return (
-        <div>
+        <div data-testid='1'>
         <a className="ui huge basic image label" href="/#">
         <Image src={FlagPL} size='big' className='flag-image'/>
-        <div className="ui right transparent labeled input"><input type="text" value={isInputSelected ? value : calculateSendAmount().toFixed(2)} onChange={handleChange} onFocus={handleInputFocus} onBlur={handleInputBlur} /></div>
+        <div className="ui right transparent labeled input"><input data-testid='4' type="text" value={isInputSelected ? value : calculateSendAmount().toFixed(2)} onChange={handleChange} onFocus={handleInputFocus} onBlur={handleInputBlur} /></div>
         <span className="color-text">PLN</span>
         </a>
         </div>

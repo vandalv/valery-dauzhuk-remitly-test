@@ -25,6 +25,7 @@ function CurrencyConverter(){
     }
 
     return (
+        <div data-testid='3'>
         <div className='centered'>
         <div className="ui compact raised segment rounded">
             <h3>You send</h3>
@@ -32,6 +33,7 @@ function CurrencyConverter(){
             <h3>They receive</h3>
             <RecievedAmount recivedAmountData={recivedAmountData} updateSendAmountData={updateSendAmountData} updateRecivedAmountData={updateRecivedAmountData} currencyExchangeData={currencyExchangeData}/>
             <h3>1 GBP = {currencyExchangeData} PLN</h3>
+        </div>
         </div>
         </div>
     )
