@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Image } from 'semantic-ui-react';
+import FlagUK from '../images/united-kingdom-flag-icon.png';
 
 function SendAmount({sendAmountData, updateRecivedAmountData, updateSendAmountData, currencyExchangeData}){
 
@@ -29,7 +31,15 @@ function SendAmount({sendAmountData, updateRecivedAmountData, updateSendAmountDa
             return exchangeResult;
     }
 
-    return <input type="text" value={isInputSelected ? value : calculateRecievedAmount().toFixed(2)} onChange={handleChange} onFocus={handleInputFocus} onBlur={handleInputBlur}/>
+    return (
+        <div>
+        <a className="ui huge basic image label" href="/#">
+        <Image src={FlagUK} size='big' className='flag-image'/>
+        <div className="ui right transparent labeled input"><input type="text" value={isInputSelected ? value : calculateRecievedAmount().toFixed(2)} onChange={handleChange} onFocus={handleInputFocus} onBlur={handleInputBlur} /></div>
+        <span className="color-text">GBP</span>
+        </a>
+        </div>
+    );
 }
 
 export default SendAmount;

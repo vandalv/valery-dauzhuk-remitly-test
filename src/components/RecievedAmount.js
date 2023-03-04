@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Image } from 'semantic-ui-react';
+import FlagPL from '../images/poland-flag-icon.png';
 
 function RecievedAmount({recivedAmountData, updateSendAmountData, updateRecivedAmountData, currencyExchangeData}){
 
@@ -29,7 +31,15 @@ function RecievedAmount({recivedAmountData, updateSendAmountData, updateRecivedA
         return Math.floor(exchangeResult * 100) / 100;;
     }
 
-    return <input type="text" value={isInputSelected ? value : calculateSendAmount().toFixed(2)} onChange={handleChange} onFocus={handleInputFocus} onBlur={handleInputBlur} />
+    return (
+        <div>
+        <a className="ui huge basic image label" href="/#">
+        <Image src={FlagPL} size='big' className='flag-image'/>
+        <div className="ui right transparent labeled input"><input type="text" value={isInputSelected ? value : calculateSendAmount().toFixed(2)} onChange={handleChange} onFocus={handleInputFocus} onBlur={handleInputBlur} /></div>
+        <span className="color-text">PLN</span>
+        </a>
+        </div>
+    );
 }
 
 export default RecievedAmount;

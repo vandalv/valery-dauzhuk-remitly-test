@@ -1,0 +1,28 @@
+body {
+    background-color: #04829e;
+}
+
+.flag-image {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.ui.segment.rounded {
+    border-radius: 15px;
+}
+
+.ui.labeled.input {
+    width: 500px;
+}
+
+.color-text {
+    color: #212e61;
+}
+
