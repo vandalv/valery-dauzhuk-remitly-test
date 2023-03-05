@@ -38,7 +38,7 @@ test('check if <RecievedAmount /> correctly calculates result after getting zero
     expect(element).toHaveValue('0.00');
 });
 
-test('check if <RecievedAmount /> correctly calculates result after getting decimal value and correctly rounds result', () => {
+test('check if <RecievedAmount /> correctly calculates result after getting decimal value and correctly rounds it', () => {
     const mockProps = {
     recivedAmountData: 0.56,
     updateSendAmountData: jest.fn(),

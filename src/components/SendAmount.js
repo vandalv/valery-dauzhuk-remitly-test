@@ -28,7 +28,7 @@ function SendAmount({sendAmountData, updateRecivedAmountData, updateSendAmountDa
 
     function calculateRecievedAmount() {
             let exchangeResult = sendAmountData / currencyExchangeData;
-            if(exchangeResult < 0.01 && exchangeResult > 0){
+            if(exchangeResult < 0.01 && exchangeResult > 0 && currencyExchangeData > 1){
                 exchangeResult = 0.01;
             }
             return exchangeResult;
