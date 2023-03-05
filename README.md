@@ -4,7 +4,8 @@ This repository contains code and tests for the Remitly Test assignment by Valer
 
 ## Deployed App
 You can see deployed version of application visiting this link:
-Open [https://valery-dauzhuk-remitly-test.pages.dev/#](https://valery-dauzhuk-remitly-test.pages.dev/#) to view it in your browser.
+Open [https://valery-dauzhuk-remitly-test.pages.dev/#](https://valery-dauzhuk-remitly-test.pages.dev/#),
+or [https://master--silver-narwhal-a5df14.netlify.app/#](https://master--silver-narwhal-a5df14.netlify.app/#) to view it in your browser.
 !!!Important!!! Google Chrome Marks it as dangerous(you can use another browser, or allow Chrome access this site).
 
 ## Prerequisites
