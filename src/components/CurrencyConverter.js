@@ -10,7 +10,7 @@ function CurrencyConverter(){
     const [currencyExchangeData, setCurrencyExchangeData] = useState(1);
 
     useEffect(() => {
-        fetch('http://api.nbp.pl/api/exchangerates/rates/a/gbp/?format=json')
+        fetch('https://api.nbp.pl/api/exchangerates/rates/a/gbp/?format=json')
         .then(response => response.json())
         .then(data => {setCurrencyExchangeData(data.rates[0].mid)})
         .catch(error => console.log(error));
