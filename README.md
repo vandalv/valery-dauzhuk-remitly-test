@@ -2,6 +2,11 @@
 
 This repository contains code and tests for the Remitly Test assignment by Valery Dauzhuk.
 
+## Deployed App
+You can see deployed version of application visiting this link:
+Open [https://valery-dauzhuk-remitly-test.pages.dev/#](https://valery-dauzhuk-remitly-test.pages.dev/#) to view it in your browser.
+!!!Important!!! Google Chrome Marks it as dangerous(you can use another browser, or allow Chrome access this site).
+
 ## Prerequisites
 To run the code and tests from this repository, you need to have the following installed on your machine:
 - Node.js (preferably version 12 or later)
